@@ -1,0 +1,48 @@
+﻿@page
+@model Diplom_Proekt.Pages.Tovar.IndexModel
+@{
+
+}
+@*CSS*@
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+@*HTML *@
+<section>
+	<h2>Список Товаров</h2>
+	<a class='btn btn-primary btn-sm' href='/Tovar/Create'>Новый Товар</a>
+	 <div class="tbl-header">
+	<table  cellpadding="0" cellspacing="0" border="0"> @*таблица Из SQL*@
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Тип</th>
+				<th>Количество</th>
+				<th>Поставщик</th>
+				<th>Цена</th>
+				<th> </th>
+			</tr>
+		</thead>
+		</table>
+		</div>
+
+		<div class="tbl-content">
+			<table cellpadding="0" cellspacing="0" border="0">
+		<tbody>
+			@foreach (var item in Model.listTovar)
+			{
+					<tr >
+						<td>@item.id </td>
+						<td>@item.type_of </td>
+						<td>@item.count_of </td>
+						<td>@item.postavka </td>
+						<td>@item.price </td>
+						<td>
+							<a class="btn btn-primary btn-sm" href="/Tovar/Edit?id=@item.id">Редактировать</a>
+							<a class="btn btn-danger btn-sm" href="/Tovar/Delete?id=@item.id">Удалить</a>
+						</td>
+					</tr>
+			}
+		</tbody>
+			</table>
+		</div>
+</section>
