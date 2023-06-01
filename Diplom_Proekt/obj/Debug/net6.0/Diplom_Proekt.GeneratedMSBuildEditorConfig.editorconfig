@@ -28,6 +28,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Visual/Proek_Diplom_Rabota_Gorshkov/Diplom_Proekt/Diplom_Proekt/Pages/Returns/CreateR.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV0dXJuc1xDcmVhdGVSLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Visual/Proek_Diplom_Rabota_Gorshkov/Diplom_Proekt/Diplom_Proekt/Pages/Returns/DeleteR.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV0dXJuc1xEZWxldGVSLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Visual/Proek_Diplom_Rabota_Gorshkov/Diplom_Proekt/Diplom_Proekt/Pages/Returns/EditR.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV0dXJuc1xFZGl0Ui5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Visual/Proek_Diplom_Rabota_Gorshkov/Diplom_Proekt/Diplom_Proekt/Pages/Returns/IndexR.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV0dXJuc1xJbmRleFIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Visual/Proek_Diplom_Rabota_Gorshkov/Diplom_Proekt/Diplom_Proekt/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,6 +62,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Visual/Proek_Diplom_Rabota_Gorshkov/Diplom_Proekt/Diplom_Proekt/Pages/Tovar/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG92YXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Visual/Proek_Diplom_Rabota_Gorshkov/Diplom_Proekt/Diplom_Proekt/Pages/Tovar/Returns.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG92YXJcUmV0dXJucy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Visual/Proek_Diplom_Rabota_Gorshkov/Diplom_Proekt/Diplom_Proekt/Pages/_ViewImports.cshtml]

@@ -1,13 +1,13 @@
 ﻿@page
-@model Diplom_Proekt.Pages.Tovar.CreateModel
+@model Diplom_Proekt.Pages.Tovar.ReturnsModel
 @{
 }
 @*HTML *@
 <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 <br>
-<h2>Добавить Товар</h2>
+<h2>Вернуть Товар</h2>
 
-@if(Model.errorMessage.Length > 0)
+@if (Model.errorMessage.Length > 0)
 {
 	<div class='alert alert-warning alert-dismissible fade show' role='alert'>
 		<strong>@Model.errorMessage</strong>
@@ -19,33 +19,28 @@
 
 	<div class="row mb-3">
 		<label class="col-sm-3 col-form-label">Тип</label>
-		<div class ="col-sm-6">
+		<div class="col-sm-6">
 			<input type="text" class="form-control" name="type_of" value="@Model.TovarInfo.type_of" />
 		</div>
 	</div>
 
 	<div class="row mb-3">
-		<label class="col-sm-3 col-form-label">Количество, шт</label>
-		<div class ="col-sm-6">
+		<label class="col-sm-3 col-form-label">Количество</label>
+		<div class="col-sm-6">
 			<input type="text" class="form-control" name="count_of" value="@Model.TovarInfo.count_of" />
 		</div>
 	</div>
 
 	<div class="row mb-3">
 		<label class="col-sm-3 col-form-label">Поставщик</label>
-		<div class ="col-sm-6">
+		<div class="col-sm-6">
 			<input type="text" class="form-control" name="postavka" value="@Model.TovarInfo.postavka" />
 		</div>
 	</div>
 
-	<div class="row mb-3">
-		<label class="col-sm-3 col-form-label">Цена, ИТОГО</label>
-		<div class ="col-sm-6">
-			<input type="text" class="form-control" name="price" value="@Model.TovarInfo.price" />
-		</div>
-	</div>
 
-	@if (Model.successMessage.Length>0){
+	@if (Model.successMessage.Length > 0)
+	{
 		<div class="row mb-3">
 			<div class="col-sm-9">
 				<div class='alert alert-success alert-dismissible fade show' role='alert'>
@@ -57,10 +52,10 @@
 	}
 
 	<div class="row mb-3">
-		<div class ="offset-sm-3 col-sm-3 d-grid" >
+		<div class="offset-sm-3 col-sm-3 d-grid">
 			<button type="submit" class="btn btn-primary">Добавить</button>
 		</div>
-		<div class ="col-sm-3 d-grid" >
+		<div class="col-sm-3 d-grid">
 			<a class="btn btn-outline-primary" href="/" role="button">Закрыть</a>
 		</div>
 	</div>

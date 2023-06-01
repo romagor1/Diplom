@@ -1,0 +1,136 @@
+﻿@page
+@model Diplom_Proekt.Pages.Returns.IndexRModel
+@{
+}
+@*CSS*@
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	::placeholder {
+		Color: #FFF;
+	}
+
+	.search-box {
+		position: absolute;
+		top: 5%;
+		left: 75%;
+		transform: translate(-50%, -50%);
+		background: #0d6efd;
+		height: 9%;
+		border-radius: 40px;
+	}
+
+	.search-box:hover > .search-txt {
+		width: 240px;
+		padding: 0 6px;
+	}
+
+	.search-box:hover > .search-btn {
+		background: white;
+		color: black;
+	}
+
+	.search-btn {
+		color: #eeeeee;
+		float: right;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background: #2f3640;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.4s;
+		color: white;
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	.search-btn > i {
+		font-size: 20px;
+	}
+
+	.search-txt {
+		border: none;
+		background: none;
+		outline: none;
+		float: left;
+		padding: 0;
+		color: white;
+		font-size: 16px;
+		transition: 0.4s;
+		line-height: 40px;
+		width: 0px;
+		font-weight: bold;
+	}
+</style>
+
+@*HTML *@
+<section>
+	<h2>Список Возврата</h2>
+	<a class='btn btn-primary btn-sm' href='/Returns/CreateR'>Новый возврат</a>
+			<div class="tbl-header">
+					<div class="search-box">
+						<input id="search-text" onkeyup="tableSearch()" type="text" name="" class="search-txt" placeholder="Введите текст" />
+						<a class="search-btn" href="#">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</a>
+					</div>
+					<table  cellpadding="0" cellspacing="0" border="0"> @*таблица Из SQL*@
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Тип</th>
+								<th>Количество,шт</th>
+								<th>Поставщик</th>
+								<th> </th>
+							</tr>
+						</thead>
+					</table>
+			</div>
+
+		<div class="tbl-content">
+		<table id="info-table" cellpadding="0" cellspacing="0" border="0">
+				<tbody>
+						@foreach (var item in Model.listTovar)
+						{
+								<tr >
+									<td>@item.id </td>
+									<td>@item.type_of </td>
+									<td>@item.count_of </td>
+									<td>@item.postavka </td>
+									<td>
+										<a class="btn btn-primary btn-sm" href="/Returns/EditR?id=@item.id">Редактировать</a>
+										<a class="btn btn-danger btn-sm" href="/Returns/DeleteR?id=@item.id">Удалить</a>
+									</td>
+								</tr>
+						}
+				</tbody>
+			</table>
+		</div>
+</section>
+
+
+@*Поиск функция js*@
+<script>
+	function tableSearch() {
+		var phrase = document.getElementById('search-text');
+		var table = document.getElementById('info-table');
+		var regPhrase = new RegExp(phrase.value, 'i');
+		var flag = false;
+		for (var i = 1; i < table.rows.length; i++) {
+			flag = false;
+			for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {
+				flag = regPhrase.test(table.rows[i].cells[j].innerHTML);
+				if (flag) break;
+			}
+			if (flag) {
+				table.rows[i].style.display = "";
+			} else {
+				table.rows[i].style.display = "none";
+			}
+
+		}
+	}
+</script>
